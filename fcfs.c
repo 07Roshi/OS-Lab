@@ -30,7 +30,7 @@ int main()
      printf("\nPName\t Arrtime\t Burtime\t start\t TAT\t finish");
      for(i=0;i<n;i++)
       {
-        printf("\n%d\t%6d\t%6d\t%6d\t%6d\t%6d",pn[i],arr[i],bur[i],star[i],tat[i],finish[i]);
+        printf("\n%d\t/t%6d\t/t%6d\t%6d\t%6d\t%6d",pn[i],arr[i],bur[i],star[i],tat[i],finish[i]);
         totwt+=wt[i];
         tottat+=tat[i];
       }

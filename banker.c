@@ -66,4 +66,9 @@ void main(){
         pno=d+1;
         goto A;
     }
+    printf("\t <");
+    for(i=0;i<k;i++)
+        printf(" P[%d] ",output[i]);
+    printf(">");
+    getch();
 }

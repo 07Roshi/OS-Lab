@@ -42,3 +42,19 @@ void *philosopher(void *num) {
 	sem_post(&chopstick[phil]);
 	sem_post(&room);
 }
+
+/*Philosopher 0 has entered room
+Philosopher 1 has entered room
+Philosopher 1 is eating
+Philosopher 3 has entered room
+Philosopher 3 is eating
+Philosopher 2 has entered room
+Philosopher 1 has finished eating
+Philosopher 3 has finished eating
+Philosopher 0 is eating
+Philosopher 4 has entered room
+Philosopher 2 is eating
+Philosopher 0 has finished eating
+Philosopher 2 has finished eating
+Philosopher 4 is eating
+Philosopher 4 has finished eating*/

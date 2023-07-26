@@ -30,7 +30,7 @@ int main()
      printf("\nPName \t Arrtime \t Burtime \t start \t TAT \t finish");
      for(i=0;i<n;i++)
       {
-        printf("\n%d\t%6d\t%6d\t%6d\t%6d\t%6d",pn[i],arr[i],bur[i],star[i],tat[i],finish[i]);
+        printf("\n%d\t%6d\t\t%6d\t\t%6d\t%6d\t%6d",pn[i],arr[i],bur[i],star[i],tat[i],finish[i]);
         totwt+=wt[i];
         tottat+=tat[i];
       }
@@ -40,15 +40,15 @@ int main()
 
 /*Enter the number of processes :
 4
-Enter the process name , arrival time and burst time : 1 0 5
-Enter the process name , arrival time and burst time : 2 1 3
+Enter the process name , arrival time and burst time : 1 0 35
+Enter the process name , arrival time and burst time : 2 1 15
 Enter the process name , arrival time and burst time : 3 2 4
 Enter the process name , arrival time and burst time : 4 4 1
 
 PName    Arrtime         Burtime         start   TAT     finish
-1            0       5       0       5       5
-2            1       3       5       7       8
-3            2       4       8      10      12
-4            4       1      12       9      13
-Average waiting time : 4.500000
-Average turn around time : 7.750000*/
+1            0              35               0      35      35
+2            1              15              35      49      50
+3            2               4              50      52      54
+4            4               1              54      51      55
+Average waiting time : 33.000000
+Average turn around time : 46.750000*/

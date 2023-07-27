@@ -24,5 +24,19 @@ void printFrame(int frames[], int n)
 }
 
 void optimal(int pages[], int n, int capacity){
-    
+    int frames[capacity];
+    int pageFaults=0;
+    int index, farthest, futureIndex;
+    for(int i=0;i<capacity;i++)
+    frames[i]=-1;
+    for(int i=0;i<n;i++)
+    {
+        int page=pages[i];
+        index = findIndex(frames, capacity, page);
+        if (index==-1)
+        {
+            int emptyIndex = findIndex(frames, capacity, -1);
+        }
+    }
+
 }

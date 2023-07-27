@@ -18,7 +18,7 @@ void printFrame(int frames[], int n)
         if(frames[i]==-1)
         printf(" ");
         else
-        printf("%d",frames[i]);
+        printf("%d ",frames[i]);
     }
     printf("\n");
 }

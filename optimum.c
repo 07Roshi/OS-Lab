@@ -13,7 +13,7 @@ int findIndex(int frames[], int n, int page)
 
 void printFrame(int frames[], int n)
 {
-    for (int n=0;i<n;i++)
+    for (int i=0;i<n;i++)
     {
         if(frames[i]==-1)
         printf(" ");

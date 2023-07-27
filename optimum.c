@@ -36,6 +36,41 @@ void optimal(int pages[], int n, int capacity){
         if (index==-1)
         {
             int emptyIndex = findIndex(frames, capacity, -1);
+        if (emptyIndex!=-1)
+        {
+            frames[emptyIndex]=page;
+        }
+        else
+        {
+            farthest = i+1;
+            futureIndex= -1;
+            for(int j=0;j<capacity;j++)
+            {
+                int currentFrame = frames[j];
+                int k;
+            for (k=i+1;k<n;k++)
+            {
+                if(currentFrame==pages[k])
+                {
+                    if(k>farthest)
+                    {
+                        farthest=k;
+                        futureIndex=j;
+                    }
+                    break;
+                }
+            }
+            if(k==n)
+            {
+                futureIndex=j;
+                break;
+            }
+            }
+            frames[futureIndex]=page;
+            }
+            pageFaults++;
+        }
+        printFrame(frames, capacity);
         }
     }
 

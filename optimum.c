@@ -22,3 +22,7 @@ void printFrame(int frames[], int n)
     }
     printf("\n");
 }
+
+void optimal(int pages[], int n, int capacity){
+    
+}

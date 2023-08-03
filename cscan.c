@@ -42,19 +42,20 @@ int main()
     {
         printf("SEquence of request acess:\n");
         for(i=index;i<n;i++)
+        {
+        printf("%d ",RQ[i]);
+        TotalHeadMoment = TotalHeadMoment + abs(RQ[i]-initial);
+        initial = RQ[i];
+        }
+    TotalHeadMoment = TotalHeadMoment + abs(size-RQ[i-1]-1);
+    TotalHeadMoment = TotalHeadMoment + abs(size-1-0);
+    initial = 0;
+    for(i=0; i<index; i++)
     {
         printf("%d ",RQ[i]);
         TotalHeadMoment = TotalHeadMoment + abs(RQ[i]-initial);
         initial = RQ[i];
     }
-    TotalHeadMoment = TotalHeadMoment + abs(size-RQ[i-1]-1);
-    TotalHeadMoment = TotalHeadMomeent + abs(size-1-0);
-    initial = 0;
-for(i=0; i<index; i++)
-    {
-        printf("%d ",RQ[i]);
-        TotalHeadMoment = TotalHeadMoment + abs(RQ[i]-initial);
-        initial = RQ[i];
     }
     else
     {
@@ -66,5 +67,17 @@ for(i=0; i<index; i++)
             initial = RQ[i];
         }
     }
+    TotalHeadMoment = TotalHeadMoment + abs(RQ[i+1]-0);
+    TotalHeadMoment = TotalHeadMoment + abs(size-1-0);
+    initial = size-1;
+    for(i=n-1;i>=index;i--)
+    {
+        printf("%d ",RQ[i]);
+        TotalHeadMoment = TotalHeadMoment + abs(RQ[i]-initial);
+        initial = RQ[i];
     }
+
+    printf("\nTotal Head Movement: %d\n",TotalHeadMoment);
+    return 0;
+    
 }

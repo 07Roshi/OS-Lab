@@ -8,13 +8,16 @@ int main()
     scanf("%d",&n);
     printf("Enter the Requests sequence\n");
     for(i=0;i<n;i++)
-        scanf("%d",&RQ[i]);
+        scanf("%d",&RQ[i]); 
     printf("Enter the initial head position\n");
     scanf("%d",&initial);
     printf("Enter the total disk size\n");
     scanf("%d",&size);
     printf("Enter the head movement direction for high 1 and for low 0\n");
     scanf("%d",&move);
+
+    //logic for scan disk scheduling
+    //logic for sorting
 
     for(i=0;i<n;i++)
     {
@@ -47,15 +50,14 @@ int main()
         TotalHeadMoment = TotalHeadMoment + abs(RQ[i]-initial);
         initial = RQ[i];
         }
-    TotalHeadMoment = TotalHeadMoment + abs(size-RQ[i-1]-1);
-    TotalHeadMoment = TotalHeadMoment + abs(size-1-0);
-    initial = 0;
-    for(i=0; i<index; i++)
-    {
-        printf("%d ",RQ[i]);
-        TotalHeadMoment = TotalHeadMoment + abs(RQ[i]-initial);
-        initial = RQ[i];
-    }
+        TotalHeadMoment = TotalHeadMoment + abs(size-RQ[i-1]-1);
+        initial = size-1;
+        for(i=index-1;i>=0;i--)
+        {
+            printf("%d ",RQ[i]);
+            TotalHeadMoment = TotalHeadMoment + abs(RQ[i]-initial);
+            initial = RQ[i];
+        }
     }
     else
     {
@@ -66,18 +68,15 @@ int main()
             TotalHeadMoment = TotalHeadMoment + abs(RQ[i]-initial);
             initial = RQ[i];
         }
-    }
-    TotalHeadMoment = TotalHeadMoment + abs(RQ[i+1]-0);
-    TotalHeadMoment = TotalHeadMoment + abs(size-1-0);
-    initial = size-1;
-    for(i=n-1;i>=index;i--)
-    {
+        TotalHeadMoment = TotalHeadMoment + abs(RQ[i+1]-0);
+        initial = 0;
+        for(i=index;i<n;i++)
+        {
         printf("%d ",RQ[i]);
         TotalHeadMoment = TotalHeadMoment + abs(RQ[i]-initial);
         initial = RQ[i];
+        }
     }
-
     printf("\nTotal Head Movement: %d\n",TotalHeadMoment);
-    return 0;
-    
+    return 0;   
 }
